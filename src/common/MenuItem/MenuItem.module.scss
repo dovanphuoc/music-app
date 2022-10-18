@@ -1,0 +1,7 @@
+@import "../../utils/variable";
+
+.menuItem {
+    background-color: $alphaBg;
+    color: $white;
+    border-left: 3px solid $purplePrimary;
+}

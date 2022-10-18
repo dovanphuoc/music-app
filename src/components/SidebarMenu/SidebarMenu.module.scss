@@ -1,0 +1,23 @@
+@import "../../utils/variable";
+.sidebar {
+    height: calc(100vh - 90px);
+    position: relative;
+    z-index: 100;
+    width: 240px;
+    background-color: $sidebarBg;
+    padding-top: 70px;
+    padding-bottom: 54px;
+    .navbarTop {
+        width: 240px;
+        height: 70px;
+        position: fixed;
+        top: 0;
+        padding: 0 25px 0 28px;
+        display: flex;
+        align-items: center;
+    }
+    .navbarMain {
+        position: relative;
+        margin-bottom: 15px;        
+    }
+}
