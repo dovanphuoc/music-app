@@ -1,7 +1,20 @@
 @import "../../utils/variable";
 
 .menuItem {
-    background-color: $alphaBg;
+    &.active {
+        // background: $alphaBg;
+    }
     color: $white;
     border-left: 3px solid $purplePrimary;
+    .menuLink {
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+        font-weight: 700;
+        padding: 8px 25px;
+        color: $white;
+    }
+    .text {
+        margin-left: 10px;
+    }
 }
