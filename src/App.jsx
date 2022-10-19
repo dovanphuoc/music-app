@@ -7,18 +7,32 @@ import GenreSong from './pages/GenreSong/GenreSong'
 import TopSong from './pages/TopSong/TopSong'
 import MvSong from './pages/MvSong/MvSong'
 import HomePage from './pages/HomePage/HomePage';
+import SidebarMenu from './components/SidebarMenu/SidebarMenu'
+import HeaderMenu from './components/Header/Header'
+import PlayerQueue from './components/PlayerQueue/PlayerQueue'
+import PlayControl from './components/PlayControl/PlayControl'
+import routes from './constants/routes/routes';
+import styles from './App.module.scss'
+import NowPlaying from './components/NowPlaying/NowPlaying';
 function App() {
   return (
-    <Routes>
-      <Route element={<HomePage />} path="/" />
-      <Route element={<ZingChart />} path="/zing-chart" />
-      <Route element={<Profile />} path="/my-music" />
-      <Route element={<RadioSong />} path="/radio" />
-      <Route element={<NewSong />} path="/moi-phat-hanh" />
-      <Route element={<GenreSong />} path="/hub" />
-      <Route element={<TopSong />} path="/top100" />
-      <Route element={<MvSong />} path="the-loai-video/Viet-Nam" />
-    </Routes>
+    <div className={styles.layout}>
+      <SidebarMenu />
+      <HeaderMenu />
+      <PlayerQueue />
+      <PlayControl />
+      <NowPlaying />
+      <Routes>
+        <Route element={<HomePage />} path={routes.homePage} />
+        <Route element={<ZingChart />} path={routes.zingChart} />
+        <Route element={<Profile />} path={routes.profile} />
+        <Route element={<RadioSong />} path={routes.radio} />
+        <Route element={<NewSong />} path={routes.newSong} />
+        <Route element={<GenreSong />} path={routes.typeSong} />
+        <Route element={<TopSong />} path={routes.top} />
+        <Route element={<MvSong />} path={routes.mv} />
+      </Routes>
+    </div>
   );
 }
 

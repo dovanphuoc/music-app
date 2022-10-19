@@ -1,6 +1,6 @@
 @import "../../utils/variable";
 .sidebar {
-    height: calc(100vh - 90px);
+    // height: calc(100vh - 90px);
     position: relative;
     z-index: 100;
     width: 240px;
@@ -15,10 +15,20 @@
         padding: 0 25px 0 28px;
         display: flex;
         align-items: center;
+        .bgLogo {
+            background: url('../../images/logo-dark.svg') no-repeat;
+            background-size: contain;
+            background-position: center;
+            width: 120px;
+            height: 40px;
+        }
     }
     .navbarMain {
         position: relative;
-        margin-bottom: 15px;        
+        margin-bottom: 15px;
+        .sidebarSecond {
+            margin-top: 10px;
+        }        
     }
     .sidebarDivide {
         position: relative;
@@ -61,5 +71,38 @@
             bottom: 2px;
             z-index: 100;
         }
+    }
+    .vipBanner {
+        padding: 15px 8px;
+        border-radius: 8px;
+        margin: 10px 20px;
+        text-align: center;
+        background-image: linear-gradient(117deg,#5a4be7,#c86dd7 102%);
+    }
+    .text {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        font-weight: 600;
+        border-color: $yellow;
+        line-height: 1.67;
+        color: $white;
+    }
+    .link {
+        color: $white;
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+        font-weight: 700;
+        padding: 8px 25px;
+    }
+    .linkActive {
+        border-left: 3px solid #158370;
+        background-color: hsla(0,0%,100%,0.1);
+        color: $white;
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+        font-weight: 700;
+        padding: 8px 25px;
     }
 }
